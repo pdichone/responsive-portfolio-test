@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_portfolio_test/utils/responsive_layout.dart';
 import 'package:responsive_portfolio_test/widgets/body.dart';
 import 'package:responsive_portfolio_test/widgets/button_row.dart';
-import 'package:responsive_portfolio_test/widgets/small_body.dart';
 
 class Portfolio extends StatelessWidget {
   @override
@@ -11,8 +9,8 @@ class Portfolio extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         toolbarHeight: 60,
-        backgroundColor: Colors.white,
-        elevation: 0.0,
+        backgroundColor: Colors.deepPurpleAccent,
+        elevation: 3,
         centerTitle: false,
         title: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -30,7 +28,7 @@ class Portfolio extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Text(
-                  "Gina Machava",
+                  "Paulo",
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 20.0,

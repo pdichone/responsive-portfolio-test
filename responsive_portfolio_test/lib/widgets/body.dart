@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class Body extends StatelessWidget {
   Body({Key key}) : super(key: key);
 
-  var projectsList = [
+  final projectsList = [
     {
       'title': 'Building a Cat',
       'subtitle': 'Great client',
@@ -54,7 +54,7 @@ class Body extends StatelessWidget {
                         alignment: Alignment.centerLeft,
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 40, vertical: 60),
+                              horizontal: 150, vertical: 60),
                           child: TextButton.icon(
                               style: TextButton.styleFrom(
                                   textStyle: TextStyle(color: Colors.black12),
@@ -97,9 +97,9 @@ class Body extends StatelessWidget {
                 child: Text(
                   "My Projects",
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.black45,
                       fontWeight: FontWeight.w600,
-                      fontSize: 16.0,
+                      fontSize: 23.0,
                       fontFamily: "Open Sans"),
                 ),
               ),
