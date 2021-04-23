@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ButtonRow extends StatelessWidget {
   const ButtonRow({Key key, this.size = MainAxisSize.min}) : super(key: key);
@@ -14,7 +15,9 @@ class ButtonRow extends StatelessWidget {
           child: Row(
             children: [
               TextButton.icon(
-                  onPressed: () {},
+                  onPressed: () async {
+                    await launch('https://facebook.com');
+                  },
                   style: ButtonStyle(),
                   icon: Image.asset(
                     "assets/images/social/facebook.png",
@@ -23,7 +26,9 @@ class ButtonRow extends StatelessWidget {
                   ),
                   label: Text('')),
               TextButton.icon(
-                  onPressed: () {},
+                  onPressed: () async {
+                    await launch('https://instagram.com');
+                  },
                   style: ButtonStyle(),
                   icon: Image.asset(
                     "assets/images/social/instagram.png",
@@ -32,7 +37,9 @@ class ButtonRow extends StatelessWidget {
                   ),
                   label: Text('')),
               TextButton.icon(
-                  onPressed: () {},
+                  onPressed: () async {
+                    await launch('https://twitter.com');
+                  },
                   style: ButtonStyle(),
                   icon: Image.asset(
                     "assets/images/social/twitter.png",

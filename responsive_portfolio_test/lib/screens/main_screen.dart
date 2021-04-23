@@ -9,7 +9,7 @@ class Portfolio extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         toolbarHeight: 60,
-        backgroundColor: Colors.deepPurpleAccent,
+        backgroundColor: Colors.white,
         elevation: 3,
         centerTitle: false,
         title: Padding(
@@ -22,7 +22,7 @@ class Portfolio extends StatelessWidget {
                   radius: 28,
                   backgroundColor: Colors.yellow,
                   foregroundImage: NetworkImage(
-                      'https://i.pravatar.cc/150?u=fake@pravatar.com'),
+                      'https://pbs.twimg.com/profile_images/888969496475598852/xi_Vvl_w_400x400.jpg'),
                 ),
               ),
               Padding(

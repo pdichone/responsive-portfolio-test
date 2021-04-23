@@ -41,44 +41,58 @@ class Body extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Align(
-                  alignment: Alignment.topCenter,
-                  child: Column(
-                    children: [
-                      Text(
-                        ' I\'m Paulo.\n A software developer \n and a teacher',
-                        style:
-                            TextStyle(color: Colors.blueGrey, fontSize: 44.5),
+                Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Opacity(
+                      opacity: 0.5,
+                      child: Image.asset(
+                        'headshot.png',
+                        fit: BoxFit.cover,
                       ),
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 150, vertical: 60),
-                          child: TextButton.icon(
-                              style: TextButton.styleFrom(
-                                  textStyle: TextStyle(color: Colors.black12),
-                                  backgroundColor: Colors.amberAccent,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(24.0),
+                    ),
+                    Align(
+                      alignment: Alignment.topCenter,
+                      child: Column(
+                        children: [
+                          Text(
+                            ' I\'m Paulo.\n A software developer \n and a teacher',
+                            style: TextStyle(
+                                color: Colors.blueGrey, fontSize: 44.5),
+                          ),
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 150, vertical: 60),
+                              child: TextButton.icon(
+                                  style: TextButton.styleFrom(
+                                      textStyle:
+                                          TextStyle(color: Colors.black12),
+                                      backgroundColor: Colors.amberAccent,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(24.0),
+                                      )),
+                                  onPressed: () {},
+                                  icon: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Icon(Icons.email_outlined),
+                                  ),
+                                  label: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      'Drop me a line',
+                                      style: TextStyle(color: Colors.black54),
+                                    ),
                                   )),
-                              onPressed: () {},
-                              icon: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Icon(Icons.email_outlined),
-                              ),
-                              label: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  'Drop me a line',
-                                  style: TextStyle(color: Colors.black54),
-                                ),
-                              )),
-                        ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                )
+                    )
+                  ],
+                ),
               ],
             ),
           ),
@@ -109,7 +123,7 @@ class Body extends StatelessWidget {
                   itemCount: projectsList.length,
                   itemBuilder: (context, index) {
                     return Container(
-                      margin: EdgeInsets.all(10),
+                      margin: EdgeInsets.all(3),
                       child: Column(
                         children: [
                           Card(
